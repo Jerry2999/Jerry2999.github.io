@@ -7,14 +7,11 @@ const [staticData] = await getCollection("staticData");
 const {
   github,
   alias,
-  instagram,
   email,
-  youtube,
+  whatsapp,
   linkedin,
   emailIconName,
-  youtubeIconName,
   linkedinIconName,
-  instagramIconName,
   githubIconName,
 } = staticData.data;
 ---
@@ -41,9 +38,9 @@ const {
         href={github}
         class="flex items-center justify-center gap-3 text-base font-normal italic max-sm:text-sm"
         aria-label="About the website development"
-        ><Icon name="code" aria-hidden="true" /> Developed by <strong
+        ><Icon name="code" aria-hidden="true" /> Desarrollado por <strong
           >{alias}</strong
-        >, with Astro</a
+        >, con Astro</a
       >
     </div>
     <div
@@ -52,19 +49,14 @@ const {
       aria-label="Social media links"
     >
       <Social
+        link={whatsapp}
+        iconName="whatsapp"
+        label={`Contactar a ${alias} por WhatsApp`}
+      />
+      <Social
         link={`mailto:${email}`}
         iconName={emailIconName}
-        label={`Send email to ${email}`}
-      />
-      <Social
-        link={instagram}
-        iconName={instagramIconName}
-        label={`Visit ${alias} on Instagram`}
-      />
-      <Social
-        link={youtube}
-        iconName={youtubeIconName}
-        label={`Visit ${alias} on YouTube`}
+        label={`Enviar correo a ${email}`}
       />
       <Social
         link={github}

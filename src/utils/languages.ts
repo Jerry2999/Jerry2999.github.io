@@ -110,6 +110,18 @@ export const languages: Record<string, Language> = {
     name: "Python",
     iconName: "python",
   },
+  react: {
+    name: "React",
+    iconName: "react",
+  },
+  svelte: {
+    name: "Svelte",
+    iconName: "svelte",
+  },
+  azure: {
+    name: "Azure",
+    iconName: "azure",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {
