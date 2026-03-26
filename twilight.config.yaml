@@ -1,0 +1,170 @@
+site:
+    siteURL: "https://jerry2999.github.io/"
+    title: "Gerardo Flores"
+    subtitle: "Software Engineer"
+    lang: "es"
+    translate:
+        enable: false
+    timeZone: -6
+    font:
+        "Montserrat":
+            src: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+            family: "Montserrat"
+    themeColor:
+        hue: 160
+    defaultTheme: "dark"
+    wallpaper:
+        mode: "banner"
+        src:
+            desktop:
+                - "/assets/images/desktopWallpaper_1.jpg"
+                - "/assets/images/desktopWallpaper_2.jpg"
+                - "/assets/images/desktopWallpaper_3.jpg"
+            mobile:
+                - "/assets/images/mobileWallpaper_1.jpg"
+                - "/assets/images/mobileWallpaper_2.jpg"
+        position: "center"
+        carousel:
+            enable: true
+            interval: 4
+            kenBurns: true
+        banner:
+            homeText:
+                enable: true
+                title: "Gerardo Flores"
+                subtitle:
+                    - "Software Engineer"
+                    - "Frontend & Backend Developer"
+                    - "Apasionado por la tecnología"
+                typewriter:
+                    enable: true
+                    speed: 100
+                    deleteSpeed: 50
+                    pauseTime: 3000
+            credit:
+                enable: false
+            navbar:
+                transparentMode: "semifull"
+            waves:
+                enable: true
+                performanceMode: false
+        fullscreen:
+            zIndex: -1
+            opacity: 0.9
+            blur: 1
+            navbar:
+                transparentMode: "semi"
+    loadingOverlay:
+        enable: true
+        waitForAllResources: true
+        title:
+            enable: true
+            content: "LOADING"
+            interval: 1.5
+        spinner:
+            enable: true
+            interval: 1.5
+    favicon: []
+    bangumi:
+        userId: ""
+    generateOgImages: false
+
+umami:
+    enabled: false
+    baseUrl: ""
+    apiKey: ""
+    scripts: ""
+
+navbar:
+    links:
+        - "Home"
+        - name: "Portafolio"
+          url: "/portfolio/"
+          icon: "material-symbols:work-outline"
+          description: "Mi experiencia y proyectos profesionales"
+          children:
+              - "Projects"
+              - "Skills"
+              - "Timeline"
+        - "About"
+
+sidebar:
+    components:
+        left:
+            - type: "profile"
+              position: "top"
+            - type: "announcement"
+              position: "top"
+        right:
+            - type: "toc"
+              position: "sticky"
+              depth: 3
+
+profile:
+    avatar: "/assets/images/avatar.jpg"
+    name: "Gerardo Flores"
+    bio: "Software Engineer | Frontend, Backend, APIs & Bases de Datos"
+    links:
+        - name: "GitHub"
+          icon: "fa6-brands:github"
+          url: "https://github.com/Jerry2999"
+        - name: "LinkedIn"
+          icon: "fa6-brands:linkedin"
+          url: "https://www.linkedin.com/in/gerardo-flores-99aa5126b/"
+        - name: "WhatsApp"
+          icon: "fa6-brands:whatsapp"
+          url: "https://wa.me/528441020599"
+        - name: "Email"
+          icon: "material-symbols:mail-outline"
+          url: "mailto:gerardo.2999@hotmail.com"
+
+announcement:
+    title: "Hola!"
+    content: "Bienvenido a mi portafolio. Estoy abierto a nuevos proyectos y oportunidades."
+    closable: true
+    link:
+        enable: true
+        text: "Conóceme"
+        url: "/about/"
+        external: false
+
+post:
+    showLastModified: true
+    expressiveCode:
+        theme: "github-dark"
+    license:
+        enable: true
+        name: "CC BY-NC-SA 4.0"
+        url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    comment:
+        enable: false
+
+footer:
+    enable: false
+
+particle:
+    enable: true
+    particleNum: 10
+    limitTimes: -1
+    size:
+        min: 0.3
+        max: 0.9
+    opacity:
+        min: 0.3
+        max: 0.9
+    speed:
+        horizontal:
+            min: -0.9
+            max: 0.9
+        vertical:
+            min: 0.15
+            max: 0.3
+        rotation: 0.12
+        fadeSpeed: 0.12
+    zIndex: 100
+
+musicPlayer:
+    enable: false
+
+pio:
+    enable: false

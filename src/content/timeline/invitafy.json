@@ -1,0 +1,18 @@
+{
+    "title": "Software Engineer — Invitafy",
+    "description": "Lidero el ciclo completo de proyectos de software. Desarrollo aplicaciones web con Angular, React, Svelte y TypeScript. Implemento APIs REST, uso Azure y analizo datos con Power BI. Automatizo procesos y diseño soluciones para PyMEs.",
+    "type": "project",
+    "startDate": "2022-07-01",
+    "endDate": "",
+    "skills": ["Angular", "React", "Svelte", "TypeScript", "Azure", "Power BI", "APIs REST"],
+    "achievements": [
+        "Liderazgo de ciclo completo de proyectos de software",
+        "Coordinación de equipo de desarrollo",
+        "Automatización de procesos empresariales",
+        "Análisis de datos para toma de decisiones"
+    ],
+    "links": [],
+    "icon": "material-symbols:code",
+    "color": "#10B981",
+    "featured": true
+}

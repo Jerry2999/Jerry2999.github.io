@@ -1,0 +1,10 @@
+{
+    "name": "Svelte",
+    "description": "Framework compilado para aplicaciones web rápidas y ligeras.",
+    "icon": "logos:svelte-icon",
+    "category": "frontend",
+    "level": "intermediate",
+    "experience": { "years": 1, "months": 6 },
+    "projects": ["Invitafy"],
+    "color": "#FF3E00"
+}

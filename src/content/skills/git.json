@@ -1,0 +1,10 @@
+{
+    "name": "Git",
+    "description": "Control de versiones y colaboración en equipo.",
+    "icon": "logos:git-icon",
+    "category": "tools",
+    "level": "advanced",
+    "experience": { "years": 2, "months": 8 },
+    "projects": ["Invitafy"],
+    "color": "#F05032"
+}
