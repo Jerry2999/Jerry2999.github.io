@@ -1,0 +1,10 @@
+{
+    "name": "HTML & CSS",
+    "description": "Maquetación web semántica y estilos responsivos.",
+    "icon": "logos:html-5",
+    "category": "frontend",
+    "level": "advanced",
+    "experience": { "years": 2, "months": 8 },
+    "projects": ["Invitafy"],
+    "color": "#E34F26"
+}

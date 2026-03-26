@@ -6,7 +6,21 @@
       "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && npx astro build 2>&1 | tail -15)",
       "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && npx astro build 2>&1 | head -40)",
       "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && npx astro build 2>&1 | tail -20)",
-      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && npx astro dev 2>&1 | head -10)"
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && npx astro dev 2>&1 | head -10)",
+      "Bash(find \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\\\\Twilight-main\\\\Twilight-main\" -type f -name \"*.yaml\" -o -name \"*.yml\" -o -name \"*.config.*\" 2>/dev/null | head -20)",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && rm -rf src/ public/ dist/ node_modules/ package.json package-lock.json astro.config.mjs tsconfig.json tailwind.config.* postcss.config.* vercel.json .vercel 2>/dev/null; echo \"Cleaned\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && cp -r Twilight-main/Twilight-main/* . && cp Twilight-main/Twilight-main/.decap.yml . 2>/dev/null; echo \"Copied\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\\\\src\\\\content\\\\skills\" && rm -f astro.json git.json svelte.json tailwindcss.json && echo \"cleaned\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\\\\src\\\\content\\\\timeline\" && rm -f first-template-project.json && echo \"cleaned\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\\\\src\\\\content\\\\projects\" && rm -rf Twilight && echo \"cleaned\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\\\\src\\\\content\" && rm -rf posts/* friends/* albums/* diary/* 2>/dev/null && ls -la friends/ albums/ diary/ posts/ 2>/dev/null; echo \"cleaned\")",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && rm -rf node_modules && pnpm install 2>&1 | tail -20)",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && pnpm install 2>&1 | tail -20)",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && pnpm build 2>&1 | tail -30)",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && pnpm build 2>&1 | tail -15)",
+      "Bash(cd \"C:\\\\Users\\\\invit\\\\OneDrive\\\\Documentos\\\\CosasJerry\\\\Jerry2999.github.io\" && pnpm dev)",
+      "Bash(cat .github/workflows/*.yml 2>/dev/null | head -30)",
+      "Bash(pnpm remove:*)"
     ]
   }
 }

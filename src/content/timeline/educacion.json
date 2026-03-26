@@ -1,0 +1,16 @@
+{
+    "title": "Ingeniería Mecatrónica — Instituto Tecnológico de Saltillo",
+    "description": "Formación en programación, automatización, PLC y Arduino. Enfoque en tecnología aplicada tanto a industria como a software.",
+    "type": "project",
+    "startDate": "2017-08-01",
+    "endDate": "2022-06-30",
+    "skills": ["C", "C++", "PLC", "Arduino"],
+    "achievements": [
+        "Formación en programación y automatización",
+        "Enfoque en tecnología aplicada a industria y software"
+    ],
+    "links": [],
+    "icon": "material-symbols:school",
+    "color": "#8B5CF6",
+    "featured": false
+}

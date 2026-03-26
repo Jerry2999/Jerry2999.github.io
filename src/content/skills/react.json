@@ -1,0 +1,10 @@
+{
+    "name": "React",
+    "description": "Biblioteca para construir interfaces de usuario dinámicas.",
+    "icon": "logos:react",
+    "category": "frontend",
+    "level": "intermediate",
+    "experience": { "years": 2, "months": 0 },
+    "projects": ["Invitafy"],
+    "color": "#61DAFB"
+}

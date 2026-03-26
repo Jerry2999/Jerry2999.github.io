@@ -1,0 +1,10 @@
+{
+    "name": "JavaScript",
+    "description": "Desarrollo de aplicaciones web interactivas y lógica de negocio.",
+    "icon": "logos:javascript",
+    "category": "frontend",
+    "level": "advanced",
+    "experience": { "years": 2, "months": 8 },
+    "projects": ["Invitafy"],
+    "color": "#F7DF1E"
+}

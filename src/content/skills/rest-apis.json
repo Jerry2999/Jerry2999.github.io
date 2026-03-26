@@ -1,0 +1,10 @@
+{
+    "name": "APIs REST",
+    "description": "Diseño, implementación y consumo de APIs RESTful.",
+    "icon": "material-symbols:api",
+    "category": "backend",
+    "level": "advanced",
+    "experience": { "years": 2, "months": 6 },
+    "projects": ["Invitafy"],
+    "color": "#10B981"
+}

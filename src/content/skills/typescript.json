@@ -1,0 +1,10 @@
+{
+    "name": "TypeScript",
+    "description": "Desarrollo tipado para aplicaciones robustas y escalables.",
+    "icon": "logos:typescript-icon",
+    "category": "frontend",
+    "level": "advanced",
+    "experience": { "years": 2, "months": 6 },
+    "projects": ["Invitafy"],
+    "color": "#3178C6"
+}
