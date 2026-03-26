@@ -1,6 +1,6 @@
 {
     "name": "JavaScript",
-    "description": "Desarrollo de aplicaciones web interactivas y lógica de negocio.",
+    "description": "Lógica de negocio, manipulación del DOM y consumo de APIs.",
     "icon": "logos:javascript",
     "category": "frontend",
     "level": "advanced",

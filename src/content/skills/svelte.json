@@ -1,6 +1,6 @@
 {
     "name": "Svelte",
-    "description": "Framework compilado para aplicaciones web rápidas y ligeras.",
+    "description": "Framework ligero orientado a rendimiento, base inicial de desarrollo.",
     "icon": "logos:svelte-icon",
     "category": "frontend",
     "level": "intermediate",

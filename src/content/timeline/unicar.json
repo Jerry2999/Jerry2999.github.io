@@ -1,14 +1,15 @@
 {
     "title": "Líder de Línea de Producción — Unicar Plastics",
-    "description": "Liderazgo de equipo en línea de producción con aproximadamente 17 máquinas. Coordinación de personal, flujos de trabajo y eficiencia productiva. Aplicación de conocimientos de mecatrónica en manufactura y automatización.",
+    "description": "Inicié como practicante y fui promovido a líder de línea por desempeño. Gestión de personal, seguimiento de producción, control operativo y optimización de procesos y layout de planta.",
     "type": "project",
-    "startDate": "2020-01-01",
+    "startDate": "2019-01-01",
     "endDate": "2022-06-30",
-    "skills": ["PLC", "Arduino", "Manufactura", "Automatización"],
+    "skills": ["PLC", "Arduino", "Manufactura", "Automatización", "Liderazgo"],
     "achievements": [
-        "Coordinación de equipo de producción",
-        "Optimización de flujos de trabajo",
-        "Aplicación de mecatrónica en entornos industriales"
+        "Promoción de practicante a líder de línea por desempeño destacado",
+        "Incremento del 10% en eficiencia operativa respecto a otros turnos",
+        "Mejora en orden, limpieza y estandarización de procesos",
+        "Implementación de mejoras prácticas en producción y layout de planta"
     ],
     "links": [],
     "icon": "material-symbols:factory",

@@ -1,6 +1,6 @@
 {
-    "name": "Git",
-    "description": "Control de versiones y colaboración en equipo.",
+    "name": "Git / GitHub",
+    "description": "Control de versiones, trabajo colaborativo y gestión de proyectos.",
     "icon": "logos:git-icon",
     "category": "tools",
     "level": "advanced",

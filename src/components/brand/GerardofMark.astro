@@ -1,0 +1,26 @@
+---
+/**
+ * Marca inline: el color sigue el tema (clase `dark` en <html>) vía currentColor.
+ */
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="-120 -120 240 240"
+    role="img"
+    aria-hidden="true"
+    class:list={["shrink-0 text-neutral-900 dark:text-neutral-100", className]}
+    fill="none"
+>
+    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="0,-110 60,0 0,110 -60,0" stroke-width="8"></polygon>
+        <polygon points="0,-80 40,0 0,80 -40,0" stroke-width="4" opacity="0.9"></polygon>
+        <line x1="0" y1="-80" x2="0" y2="30" stroke-width="4" opacity="0.9"></line>
+        <polyline points="-40,0 0,30 40,0" stroke-width="4" opacity="0.9"></polyline>
+    </g>
+</svg>

@@ -1,9 +1,9 @@
 {
     "name": "Azure",
-    "description": "Servicios en la nube para bases de datos y almacenamiento.",
+    "description": "Servicios en la nube, almacenamiento y despliegue.",
     "icon": "logos:microsoft-azure",
     "category": "backend",
-    "level": "intermediate",
+    "level": "advanced",
     "experience": { "years": 2, "months": 0 },
     "projects": ["Invitafy"],
     "color": "#0089D6"

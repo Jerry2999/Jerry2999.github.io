@@ -1,0 +1,10 @@
+{
+    "name": "C / C++",
+    "description": "Lógica estructurada y bases de programación sólida.",
+    "icon": "logos:c-plusplus",
+    "category": "backend",
+    "level": "advanced",
+    "experience": { "years": 3, "months": 0 },
+    "projects": [],
+    "color": "#00599C"
+}

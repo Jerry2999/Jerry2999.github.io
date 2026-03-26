@@ -1,6 +1,6 @@
 {
-    "name": "Angular",
-    "description": "Framework para desarrollo de aplicaciones web empresariales.",
+    "name": "Angular + TypeScript",
+    "description": "Desarrollo de aplicaciones escalables, estructuradas y mantenibles.",
     "icon": "logos:angular-icon",
     "category": "frontend",
     "level": "advanced",

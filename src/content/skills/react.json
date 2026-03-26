@@ -1,9 +1,9 @@
 {
     "name": "React",
-    "description": "Biblioteca para construir interfaces de usuario dinámicas.",
+    "description": "Desarrollo de interfaces dinámicas y componentes reutilizables.",
     "icon": "logos:react",
     "category": "frontend",
-    "level": "intermediate",
+    "level": "advanced",
     "experience": { "years": 2, "months": 0 },
     "projects": ["Invitafy"],
     "color": "#61DAFB"

@@ -1,7 +1,7 @@
 site:
     siteURL: "https://jerry2999.github.io/"
     title: "Gerardo Flores"
-    subtitle: "Software Engineer"
+    subtitle: "Software Developer"
     lang: "es"
     translate:
         enable: false
@@ -33,9 +33,9 @@ site:
                 enable: true
                 title: "Gerardo Flores"
                 subtitle:
-                    - "Software Engineer"
-                    - "Frontend & Backend Developer"
-                    - "Apasionado por la tecnología"
+                    - "Software Developer"
+                    - "Full Stack | Angular, React, Svelte"
+                    - "De la idea al sistema funcional"
                 typewriter:
                     enable: true
                     speed: 100
@@ -59,12 +59,14 @@ site:
         waitForAllResources: true
         title:
             enable: true
-            content: "LOADING"
+            content: "CARGANDO"
             interval: 1.5
         spinner:
             enable: true
             interval: 1.5
-    favicon: []
+    favicon:
+        - src: "/favicon/gerardof.svg"
+          sizes: "any"
     bangumi:
         userId: ""
     generateOgImages: false
@@ -77,16 +79,22 @@ umami:
 
 navbar:
     links:
-        - "Home"
-        - name: "Portafolio"
-          url: "/portfolio/"
+        - name: "Proyectos"
+          url: "/#proyectos"
           icon: "material-symbols:work-outline"
-          description: "Mi experiencia y proyectos profesionales"
-          children:
-              - "Projects"
-              - "Skills"
-              - "Timeline"
-        - "About"
+          description: "Proyectos en la misma página"
+        - name: "Skills"
+          url: "/#skills"
+          icon: "material-symbols:psychology-outline"
+          description: "Habilidades técnicas"
+        - name: "Timeline"
+          url: "/#timeline"
+          icon: "material-symbols:timeline"
+          description: "Experiencia y educación"
+        - name: "Sobre mí"
+          url: "/#sobre-mi"
+          icon: "material-symbols:person-outline"
+          description: "Perfil y resumen"
 
 sidebar:
     components:
@@ -101,9 +109,9 @@ sidebar:
               depth: 3
 
 profile:
-    avatar: "/assets/images/avatar.jpg"
+    avatar: "/assets/images/IMG_6243.png"
     name: "Gerardo Flores"
-    bio: "Software Engineer | Frontend, Backend, APIs & Bases de Datos"
+    bio: "Software Developer | Full Stack, APIs, IA y soluciones para negocios"
     links:
         - name: "GitHub"
           icon: "fa6-brands:github"
@@ -125,7 +133,7 @@ announcement:
     link:
         enable: true
         text: "Conóceme"
-        url: "/about/"
+        url: "/#sobre-mi"
         external: false
 
 post:

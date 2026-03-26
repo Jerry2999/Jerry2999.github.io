@@ -1,6 +1,6 @@
 {
     "name": "APIs REST",
-    "description": "Diseño, implementación y consumo de APIs RESTful.",
+    "description": "Diseño, consumo e integración de servicios.",
     "icon": "material-symbols:api",
     "category": "backend",
     "level": "advanced",

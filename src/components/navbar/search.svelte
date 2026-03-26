@@ -24,17 +24,17 @@ const fakeResult: SearchResult[] = [
     {
         url: url("/"),
         meta: {
-            title: "This Is a Fake Search Result",
+            title: "Resultado de ejemplo (solo en desarrollo)",
         },
         excerpt:
-            "Because the search cannot work in the <mark>dev</mark> environment.",
+            "La búsqueda no funciona en modo <mark>dev</mark>; usa build + preview para probarla.",
     },
     {
         url: url("/"),
         meta: {
-            title: "If You Want to Test the Search",
+            title: "¿Quieres probar la búsqueda?",
         },
-        excerpt: "Try running <mark>npm build && npm preview</mark> instead.",
+        excerpt: "Ejecuta <mark>pnpm build</mark> y luego <mark>pnpm preview</mark>.",
     },
 ];
 
@@ -223,7 +223,7 @@ onDestroy(() => {
         {isDesktopSearchExpanded ? 'w-48' : 'w-11'}"
     role="button"
     tabindex="0"
-    aria-label="Search"
+    aria-label={i18n(I18nKey.search)}
     onmouseenter={() => {if (!isDesktopSearchExpanded) toggleDesktopSearch()}}
     onmouseleave={collapseDesktopSearch}
 >
@@ -237,7 +237,7 @@ onDestroy(() => {
 </div>
 
 <!-- toggle btn for phone/tablet view -->
-<button onclick={togglePanel} aria-label="Search Panel" id="search-switch"
+<button onclick={togglePanel} aria-label="Panel de búsqueda" id="search-switch"
         class="btn-plain scale-animation lg:hidden! rounded-lg w-11 h-11 active:scale-90 flex items-center justify-center">
     <Icon icon="material-symbols:search" class="text-[1.25rem]"></Icon>
 </button>
@@ -253,7 +253,7 @@ onDestroy(() => {
       dark:bg-white/5 dark:hover:bg-white/10 dark:focus-within:bg-white/10
   ">
         <Icon icon="material-symbols:search" class="absolute text-[1.25rem] pointer-events-none ml-3 transition my-auto text-black/30 dark:text-white/30"></Icon>
-        <input placeholder="Search" bind:value={keywordMobile}
+        <input placeholder={i18n(I18nKey.search)} bind:value={keywordMobile}
                class="pl-10 absolute inset-0 text-sm bg-transparent outline-0
                focus:w-60 text-black/50 dark:text-white/50"
         >

@@ -1,0 +1,336 @@
+---
+export const prerender = true;
+
+import { getEntry, render } from "astro:content";
+
+import GridLayout from "@layouts/grid.astro";
+import IconifyLoader from "@components/common/iconifyLoader.astro";
+
+import ProjectCard from "@components/data/projectCard.astro";
+import SkillCard from "@components/data/skillCard.astro";
+import TimelineItem from "@components/data/timelineItem.astro";
+import Markdown from "@components/common/markdown.astro";
+
+import { UNCATEGORIZED } from "@constants/constants";
+import { i18n } from "@i18n/translation";
+import I18nKey from "@i18n/i18nKey";
+import GerardofLogo from "@components/brand/GerardofLogo.astro";
+
+import {
+    projectsData,
+    getProjectStats,
+    getProjectsByCategory,
+    getFeaturedProjects,
+    getAllTechStack,
+} from "@utils/projects";
+import {
+    getAdvancedSkills,
+    getSkillStats,
+    getSkillsByCategory,
+    getTotalExperience,
+    skillsData,
+} from "@utils/skills";
+import {
+    timelineData,
+    getTimelineStats,
+    getTimelineByType,
+    getCurrentItems,
+    getTotalWorkExperience,
+} from "@utils/timeline";
+
+const aboutPost = await getEntry("spec", "about");
+if (!aboutPost) throw new Error("About page content not found");
+const { Content } = await render(aboutPost);
+
+// Projects
+const projectStats = getProjectStats();
+const featuredProjects = getFeaturedProjects();
+const allTechStack = getAllTechStack();
+const projectCategories = [...new Set(projectsData.map((project) => project.category))];
+const projectsByCategory = projectCategories.reduce(
+    (acc, category) => {
+        acc[category] = getProjectsByCategory(category);
+        return acc;
+    },
+    {} as Record<string, typeof projectsData>,
+);
+const getProjectCategoryText = (category: string) => {
+    switch (category) {
+        case "web":
+            return i18n(I18nKey.projectsWeb);
+        case "mobile":
+            return i18n(I18nKey.projectsMobile);
+        case "desktop":
+            return i18n(I18nKey.projectsDesktop);
+        case "other":
+            return i18n(I18nKey.projectsOther);
+        case UNCATEGORIZED:
+            return i18n(I18nKey.uncategorized);
+        default:
+            return category;
+    }
+};
+
+// Skills
+const skillStats = getSkillStats();
+const advancedSkills = getAdvancedSkills();
+const totalExperience = getTotalExperience();
+const skillCategories = [...new Set(skillsData.map((skill) => skill.category))];
+const skillsByCategory = skillCategories.reduce(
+    (acc, category) => {
+        acc[category] = getSkillsByCategory(category);
+        return acc;
+    },
+    {} as Record<string, typeof skillsData>,
+);
+const getSkillCategoryText = (category: string) => {
+    switch (category) {
+        case "ai":
+            return i18n(I18nKey.skillsAI);
+        case "server":
+            return i18n(I18nKey.skillsBackend);
+        case "client":
+            return i18n(I18nKey.skillsClient);
+        case "web":
+            return i18n(I18nKey.skillsFrontend);
+        case "database":
+            return i18n(I18nKey.skillsDatabase);
+        case "engines":
+            return i18n(I18nKey.skillsEngines);
+        case "tools":
+            return i18n(I18nKey.skillsTools);
+        case "others":
+            return i18n(I18nKey.skillsOthers);
+        case UNCATEGORIZED:
+            return i18n(I18nKey.uncategorized);
+        default:
+            return category;
+    }
+};
+const skillIcons = skillsData.map((skill) => skill.icon).filter(Boolean);
+
+// Timeline
+const getTimelineTypeIcon = (type: string) => {
+    switch (type) {
+        case "education":
+            return "material-symbols:school";
+        case "work":
+            return "material-symbols:work";
+        case "project":
+            return "material-symbols:code";
+        case "achievement":
+            return "material-symbols:emoji-events";
+        default:
+            return "material-symbols:event";
+    }
+};
+const timelineIcons = timelineData.map((item) => item.icon || getTimelineTypeIcon(item.type)).filter(Boolean);
+const timelineStats = getTimelineStats();
+const currentItems = getCurrentItems();
+const workExperience = getTotalWorkExperience();
+const allTimelineItems = getTimelineByType();
+---
+
+<GridLayout title="Portafolio" description="Todo en una sola página">
+    <!-- Preload iconos de Skills/Timeline (los Projects no lo requieren) -->
+    <IconifyLoader preloadIcons={[...skillIcons, ...timelineIcons]} />
+
+    <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-6 relative w-full space-y-12">
+           
+            <!-- Sobre mí -->
+            <section id="sobre-mi" class="scroll-mt-24">
+              
+                <Markdown class="mt-2">
+                    <Content />
+                </Markdown>
+
+                <div class="mt-8 flex justify-center">
+                    <GerardofLogo class="w-48 sm:w-56 h-auto opacity-80 dark:opacity-90 select-none" />
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="scroll-mt-24">
+                <div class="flex items-end justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-black/90 dark:text-white/90">
+                            {i18n(I18nKey.skills)}
+                        </h2>
+                        <p class="text-black/60 dark:text-white/60">
+                            {i18n(I18nKey.skillsSubtitle)}
+                        </p>
+                    </div>
+                    <a class="text-sm text-(--primary) hover:underline" href="#indice">Volver arriba</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-linear-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{skillStats.total}</div>
+                        <div class="text-sm text-blue-600/70 dark:text-blue-400/70">{i18n(I18nKey.skillsTotal)}</div>
+                    </div>
+                    <div class="bg-linear-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-red-600 dark:text-red-400">{skillStats.byLevel.expert}</div>
+                        <div class="text-sm text-red-600/70 dark:text-red-400/70">{i18n(I18nKey.skillsExpert)}</div>
+                    </div>
+                    <div class="bg-linear-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">{skillStats.byLevel.advanced}</div>
+                        <div class="text-sm text-orange-600/70 dark:text-orange-400/70">{i18n(I18nKey.skillsAdvanced)}</div>
+                    </div>
+                    <div class="bg-linear-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                            {totalExperience.years}{totalExperience.months > 0 ? `.${totalExperience.months}` : ""}
+                        </div>
+                        <div class="text-sm text-purple-600/70 dark:text-purple-400/70">{i18n(I18nKey.skillExperience)}</div>
+                    </div>
+                </div>
+
+                {advancedSkills.length > 0 && (
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">
+                            {i18n(I18nKey.skillsAdvancedTitle)}
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {advancedSkills.map((skill) => (
+                                <SkillCard skill={skill} size="large" showProgress={true} showIcon={true} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                <div class="space-y-10">
+                    {skillCategories.map((category) => {
+                        const categorySkills = skillsByCategory[category];
+                        if (categorySkills.length === 0) return null;
+
+                        return (
+                            <div>
+                                <h3 class="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">
+                                    {getSkillCategoryText(category)}
+                                    <span class="text-lg font-normal text-black/60 dark:text-white/60 ml-2">
+                                        ({categorySkills.length})
+                                    </span>
+                                </h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {categorySkills.map((skill) => (
+                                        <SkillCard skill={skill} size="medium" showProgress={true} showIcon={true} />
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
+                    <h3 class="text-2xl font-bold text-black/90 dark:text-white/90 mb-6">
+                        {i18n(I18nKey.skillsDistribution)}
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-black/80 dark:text-white/80 mb-4">
+                                {i18n(I18nKey.skillsByLevel)}
+                            </h4>
+                            <div class="space-y-3">
+                                {Object.entries(skillStats.byLevel).map(([level, count]) => {
+                                    const percentage = Math.round((count / skillStats.total) * 100);
+                                    return (
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-20 text-sm text-black/70 dark:text-white/70">
+                                                {i18n(
+                                                    level === "expert"
+                                                        ? I18nKey.skillsExpert
+                                                        : level === "advanced"
+                                                            ? I18nKey.skillsAdvanced
+                                                            : level === "intermediate"
+                                                                ? I18nKey.skillsIntermediate
+                                                                : I18nKey.skillsBeginner,
+                                                )}
+                                            </div>
+                                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                                <div
+                                                    class={`h-2 rounded-full transition-all duration-600 ${
+                                                        level === "expert"
+                                                            ? "bg-red-500"
+                                                            : level === "advanced"
+                                                                ? "bg-orange-500"
+                                                                : level === "intermediate"
+                                                                    ? "bg-yellow-500"
+                                                                    : "bg-green-500"
+                                                    }`}
+                                                    style={`width: ${percentage}%`}
+                                                ></div>
+                                            </div>
+                                            <div class="w-12 text-sm text-black/70 dark:text-white/70 text-right">
+                                                {count}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-black/80 dark:text-white/80 mb-4">
+                                {i18n(I18nKey.skillsByCategory)}
+                            </h4>
+                            <div class="space-y-3">
+                                {Object.entries(skillStats.byCategory).map(([category, count]) => {
+                                    const percentage = Math.round((count / skillStats.total) * 100);
+                                    return (
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-20 text-sm text-black/70 dark:text-white/70 truncate">
+                                                {getSkillCategoryText(category)}
+                                            </div>
+                                            <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                                <div
+                                                    class="h-2 rounded-full bg-blue-500 transition-all duration-500"
+                                                    style={`width: ${percentage}%`}
+                                                ></div>
+                                            </div>
+                                            <div class="w-12 text-sm text-black/70 dark:text-white/70 text-right">
+                                                {count}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</GridLayout>
+
+<script>
+    // Scroll suave para anclas, evitando que el router de Swup “recargue” la misma página.
+    const isSamePageHashLink = (href: string | null) => {
+        if (!href) return false;
+        if (href.startsWith("#")) return true;
+        try {
+            const u = new URL(href, window.location.href);
+            return u.origin === window.location.origin && u.pathname === window.location.pathname && !!u.hash;
+        } catch {
+            return false;
+        }
+    };
+
+    document.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement | null;
+        const a = (target?.closest?.("a") as HTMLAnchorElement | null) ?? null;
+        if (!a) return;
+        const href = a.getAttribute("href");
+        if (!href) return;
+        if (!isSamePageHashLink(href)) return;
+
+        const hash = href.startsWith("#") ? href : new URL(href, window.location.href).hash;
+        if (!hash) return;
+        const id = decodeURIComponent(hash.replace(/^#/, ""));
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        e.preventDefault();
+        history.pushState(null, "", `#${encodeURIComponent(id)}`);
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+</script>

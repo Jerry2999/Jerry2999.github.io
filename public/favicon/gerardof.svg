@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -120 240 240">
+  <style>
+    .mark { fill: none; stroke: #171717; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) {
+      .mark { stroke: #fafafa; }
+    }
+  </style>
+  <g class="mark">
+    <polygon points="0,-110 60,0 0,110 -60,0" stroke-width="8"/>
+    <polygon points="0,-80 40,0 0,80 -40,0" stroke-width="4" opacity="0.9"/>
+    <line x1="0" y1="-80" x2="0" y2="30" stroke-width="4" opacity="0.9"/>
+    <polyline points="-40,0 0,30 40,0" stroke-width="4" opacity="0.9"/>
+  </g>
+</svg>

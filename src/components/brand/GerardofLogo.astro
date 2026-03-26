@@ -1,0 +1,61 @@
+---
+/**
+ * Logo completo inline: trazos y texto usan currentColor para tema claro/oscuro.
+ */
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="400"
+    height="500"
+    viewBox="0 0 400 500"
+    role="img"
+    aria-hidden="true"
+    class:list={["text-neutral-900 dark:text-neutral-100", className]}
+>
+    <style>
+        .gf-line {
+            stroke: currentColor;
+            stroke-width: 8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .gf-thin {
+            stroke: currentColor;
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0.9;
+        }
+        .gf-text-main {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 42px;
+            letter-spacing: 4px;
+            fill: currentColor;
+        }
+        .gf-text-sub {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            letter-spacing: 6px;
+            fill: currentColor;
+            opacity: 0.72;
+        }
+    </style>
+
+    <g transform="translate(200,150)">
+        <polygon points="0,-110 60,0 0,110 -60,0" class="gf-line"></polygon>
+        <polygon points="0,-80 40,0 0,80 -40,0" class="gf-thin"></polygon>
+        <line x1="0" y1="-80" x2="0" y2="30" class="gf-thin"></line>
+        <polyline points="-40,0 0,30 40,0" class="gf-thin"></polyline>
+    </g>
+
+    <text x="200" y="320" text-anchor="middle" class="gf-text-main">GERARDO</text>
+    <text x="200" y="360" text-anchor="middle" class="gf-text-sub">FLORES</text>
+</svg>

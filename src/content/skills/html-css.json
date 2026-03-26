@@ -1,6 +1,6 @@
 {
-    "name": "HTML & CSS",
-    "description": "Maquetación web semántica y estilos responsivos.",
+    "name": "HTML & CSS + Tailwind",
+    "description": "Maquetación semántica, responsive design y optimización de UI/UX.",
     "icon": "logos:html-5",
     "category": "frontend",
     "level": "advanced",

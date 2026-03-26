@@ -1,0 +1,10 @@
+{
+    "name": "Astro",
+    "description": "Generación de sitios estáticos optimizados y rápidos.",
+    "icon": "logos:astro-icon",
+    "category": "frontend",
+    "level": "intermediate",
+    "experience": { "years": 0, "months": 6 },
+    "projects": [],
+    "color": "#FF5D01"
+}

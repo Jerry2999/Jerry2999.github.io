@@ -1,14 +1,14 @@
 {
-    "title": "Invitafy — Soluciones Tecnológicas",
-    "description": "Desarrollo de software interno y soluciones tecnológicas para PyMEs. Aplicaciones web, APIs REST, análisis de datos y automatización de procesos.",
+    "title": "Invitafy — Desarrollo Web & Soluciones para Negocios",
+    "description": "Desarrollo de sitios web personalizados para clientes en +15 países, sistemas POS, control de inventarios, dashboards con Power BI e implementación de IA en producción. Reducción de cancelaciones de 5.6% a 0.5% con automatización del seguimiento de clientes.",
     "image": "",
     "category": "website",
     "techStack": ["Angular", "React", "Svelte", "TypeScript", "Azure", "Power BI"],
     "status": "in-progress",
     "liveDemo": "",
     "sourceCode": "",
-    "startDate": "2022-07-01",
+    "startDate": "2024-08-01",
     "endDate": "",
     "featured": true,
-    "tags": ["Trabajo Profesional", "Desarrollo Web"]
+    "tags": ["Trabajo Profesional", "Desarrollo Web", "Full Stack", "IA"]
 }

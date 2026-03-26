@@ -3,7 +3,7 @@
     "description": "Análisis de datos, KPIs y visualización para toma de decisiones.",
     "icon": "logos:microsoft-power-bi",
     "category": "tools",
-    "level": "intermediate",
+    "level": "advanced",
     "experience": { "years": 2, "months": 0 },
     "projects": ["Invitafy"],
     "color": "#F2C811"

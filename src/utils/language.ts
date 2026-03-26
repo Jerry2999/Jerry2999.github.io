@@ -78,7 +78,7 @@ export function getLanguageDisplayName(langCode: string): string {
 }
 
 // 检测浏览器语言并返回支持的语言代码
-export function detectBrowserLanguage(fallbackLang: SupportedLanguage = "en"): SupportedLanguage {
+export function detectBrowserLanguage(fallbackLang: SupportedLanguage = "es"): SupportedLanguage {
     // 服务端渲染时返回备用语言
     if (typeof window === "undefined" || typeof navigator === "undefined") {
         return fallbackLang;
