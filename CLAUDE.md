@@ -32,6 +32,8 @@
 - Prefiere WhatsApp como método de contacto principal (wa.me/528441020599)
 - El blog está deshabilitado por ahora — solo necesita un CV/portafolio
 - Instagram y YouTube fueron removidos — no los usa profesionalmente
+- El usuario se frustra con investigaciones largas — ir directo a la solución, no analizar de más
+- El usuario quiere que su CV refleje versatilidad mecatrónica, no solo software
 
 ## Datos del usuario (referencia rápida)
 - **Nombre completo**: Gerardo Alejandro Flores Muñoz
