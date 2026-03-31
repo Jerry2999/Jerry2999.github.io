@@ -12,10 +12,7 @@ import { sidebarConfig } from "@/config";
 export const WIDGET_COMPONENT_MAP = {
     profile: "@components/sidebar/profile.astro",
     announcement: "@components/sidebar/announcement.astro",
-    categories: "@components/sidebar/categories.astro",
-    tags: "@components/sidebar/tags.astro",
     toc: "@components/sidebar/toc.astro",
-    statistics: "@components/sidebar/statistics.astro",
     custom: null, // 自定义组件需要在配置中指定路径
 } as const;
 
