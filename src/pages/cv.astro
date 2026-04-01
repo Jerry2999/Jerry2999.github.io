@@ -93,7 +93,7 @@ const siteLang = siteConfig.lang.replace("_", "-");
     <!-- Action buttons (hidden in print) -->
     <div class="no-print actions">
         <a href="/" class="btn btn-secondary">← Volver al portafolio</a>
-        <button onclick="window.print()" class="btn btn-primary">
+        <button id="download-pdf" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
@@ -254,6 +254,21 @@ const siteLang = siteConfig.lang.replace("_", "-");
             </div>
         </section>
     </div>
+
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+    <script is:inline>
+        document.getElementById('download-pdf').addEventListener('click', function() {
+            var element = document.querySelector('.cv-container');
+            var opt = {
+                margin: 10,
+                filename: 'CV_Gerardo_Flores.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
 </body>
 </html>
 
